@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang = "en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ananya Gahlot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/theLogoFINAL.jpg" class="logo">
+            <ul>
+                <li><a href = "#header">Home</a></li>
+                <li><a href = "#about">About</a></li>
+                <li><a href = "#services">My Projects</a></li>
+                <li><a href = "#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+                <i>Computational Modeling & Data Analytics</i>
+                <h1>Hi, I'm <span>Ananya Gahlot</span><br>From Broadlands, Virginia</h1>
+        </div>
+    </div>
+</div>
+<!----------------------------------about----------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/secondpic.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi! I'm a sophomore Computational Modeling & Data Analytics (CMDA) student at
+                    Virginia Tech College of Science. I am intrigued about the world of data science, 
+                    and am looking for experience in this field. I am familiar with Java, Python, R, & 
+                    Excel. I am in the process of a passion project: Scholar Plan, an online utensil that 
+                    allows college students to financially & academically plan out their day-to-day lives.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id ="skills">
+                    <ul>
+                        <li><span>Front-End Development</span><br>Intermediate</li>
+                        <li><span>Back-End Development</span><br>Intermediate</li>
+                        <li><span>Data Analytics</span><br>Beginner</li>
+                        <li><span>Marketing</span><br>Self-Taught</li>
+                        <li><span>Microsoft Products</span><br>Intermediate</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id ="experience">
+                    <ul>
+                        <li><span>May 2023 - Present</span><br>Marketing Data Analyst & Tutor @MyExamsPrep</li>
+                        <li><span>June 2021 - August 2021</span><br>Walmart Inc.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id ="education">
+                    <ul>
+                        <li><span>2023 - Present</span><br>Virginia Tech</li>
+                        <li><span>2022 - 2023</span><br>James Madison University</li>
+                        <li><span>2018 - 2022</span><br>Briar Woods High School</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="services-list">
+            <div>
+                <p style="font-size:70px">&#128187;</p>
+                <h2>ananyagahlot.com</h2>
+                <p>Personal Portfolio Website</p>
+                <a href="https://www.ananyagahlot.com/">learn more</a>
+            </div>
+            <div>
+                <p style="font-size:70px">&#128200;</p>
+                <h2>ScholarPlan</h2>
+                <i>In Progress</i>
+                <p>Financial & Academical Planner for College Students</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <p style="font-size:70px">&#127757;</p>
+                <h2>codecanvas.us</h2>
+                <i>First Version of Website</i>
+                <p>Created Website for Start-Up Software Development Company</p>
+                <a href="https://codecanvas.us/">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i style="font-size:30px">&#128241;</i>     240-810-8905</p>
+                <p><i style="font-size:30px">&#128231;</i>     ananyagahlot@gmail.com</p>
+                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="ananya-gahlot-b6609a217" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/ananya-gahlot-b6609a217?trk=profile-badge"></a></div>     
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textArea name="Message" rows="6" placeholder="Your Message"></textArea>
+                    <button type="Submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyG2IRudm5-l9ihv_Ym_eEyYW0Q4o0S_4E1qE0O_gOIA48_swbSm-OmCkJ1AvWeAnQM/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>    
+</html>
